@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve carprice
+After=network.target
+
+[Service]
+User=root
+Group=www-data
+WorkingDirectory=/home/carprice
+Environment="PATH=/home/carprice/env/bin"
+ExecStart=/home/carprice/env/bin/uwsgi --ini carprice.ini
+
+[Install]
+WantedBy=multi-user.target
