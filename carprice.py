@@ -23,4 +23,4 @@ def return_price():
 
 
 if __name__ == '__main__':
-    app.run('194.67.112.230', 5000)
+    app.run('0.0.0.0', 5000)
