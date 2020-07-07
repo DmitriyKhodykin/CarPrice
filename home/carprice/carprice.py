@@ -1,20 +1,24 @@
 # carprice.py
 
+# Imports
 from flask import Flask, request, jsonify
 import pickle
+import json
 
-app = Flask(__name__)
+app = Flask(__name__)  # class initiation
 
-
-@app.route('/carprice', methods=['POST'])
+# Handler
+@app.route('/carprice', methods=['GET'])
 def return_price():
-    year = request.json.get('Year')
-    driven = request.json.get('Driven(km)')
-    transmission = request.json.get('Transmission')
-    engine = request.json.get('Engine(cc)')
-    power = request.json.get('Power(hp)')
-    seats = request.json.get('Seats')
-
+    data = request.data
+    data_dict = json.loads(data)
+    year = data_dict['Year']
+    driven = data_dict['Driven(km)']
+    transmission = data_dict['Transmission']
+    engine = data_dict['Engine(cc)']
+    power = data_dict['Power(hp)']
+    seats = data_dict['Seats']
+    # Deserialization CatBoostReg
     with open('pickled_model.pkl', 'rb') as pkl_file:
         regressor = pickle.load(pkl_file)
 
