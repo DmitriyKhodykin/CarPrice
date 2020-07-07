@@ -19,7 +19,7 @@ def return_price():
     power = data_dict['Power(hp)']
     seats = data_dict['Seats']
     # Deserialization CatBoostReg
-    with open('pickled_model.pkl', 'rb') as pkl_file:
+    with open('/model/pickled_model.pkl', 'rb') as pkl_file:
         regressor = pickle.load(pkl_file)
 
     predict = regressor.predict([year, driven, transmission, engine, power, seats])
