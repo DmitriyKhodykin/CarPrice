@@ -4,6 +4,8 @@
 ### 1. Данные для модели машинного обучения
 https://www.kaggle.com/avikasliwal/used-cars-price-prediction
 
+![](/service/https://carsweek.ru/upload/medialibrary/853/85340d3ca94151276bcebd5a4db49c8b.jpg)
+
 * Вид исходных данных:
 
  ```
