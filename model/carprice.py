@@ -1,4 +1,4 @@
-# cat_model.py
+# carprice.py
 
 # Установить либы:
 # pip install -r requirements.txt
@@ -13,10 +13,10 @@ from catboost import CatBoostRegressor
 # Установки
 RANDOM_SEED = 42
 VERSION = 11
-VAL_SIZE = 0.2
+VAL_SIZE = 0.33
 N_FOLDS = 5
 ITERATIONS = 2000
-LR = 0.01
+LR = 0.05
 
 
 class CatModel:
